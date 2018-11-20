@@ -100,10 +100,10 @@ function! s:ResizeRight(n)
     echo ""
 endfunction
 
-command! CmdResizeLeft call <SID>ResizeLeft(v:count)
-command! CmdResizeDown call <SID>ResizeDown(v:count)
-command! CmdResizeUp call <SID>ResizeUp(v:count)
-command! CmdResizeRight call <SID>ResizeRight(v:count)
+command! -range CmdResizeLeft call <SID>ResizeLeft(<count>)
+command! -count CmdResizeDown call <SID>ResizeDown(<count>)
+command! -count CmdResizeUp call <SID>ResizeUp(<count>)
+command! -count CmdResizeRight call <SID>ResizeRight(<count>)
 
 if get(g:, 'vim_resize_disable_auto_mappings') == 0
     nnoremap <silent> <c-left> :CmdResizeLeft<cr>
