@@ -100,7 +100,7 @@ function! s:ResizeRight(n)
     echo ""
 endfunction
 
-command! -range CmdResizeLeft call <SID>ResizeLeft(<count>)
+command! -count CmdResizeLeft call <SID>ResizeLeft(<count>)
 command! -count CmdResizeDown call <SID>ResizeDown(<count>)
 command! -count CmdResizeUp call <SID>ResizeUp(<count>)
 command! -count CmdResizeRight call <SID>ResizeRight(<count>)
